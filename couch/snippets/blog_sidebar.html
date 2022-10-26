@@ -1,0 +1,28 @@
+<div class="grid_4">
+		
+			<h4>Catagories</h4>
+			<ul class="sidebar">
+				<cms:folders masterpage='blog.php' >
+					<li><a href="<cms:show k_folder_link />"><cms:show k_folder_title /></a></li>
+				</cms:folders>
+				</li>
+			</ul>
+			
+			<cms:if k_is_page >
+			<h4>Latest News</h4>
+			<ul class="sidebar">
+				<cms:pages masterpage='blog.php' limit='4'>
+				<li><a href="<cms:show k_page_link />"><cms:show k_page_title /></a></li>
+				</cms:pages>
+			</ul>
+			</cms:if>
+			
+			<h4>Archives</h4>
+			<ul class="sidebar">
+				<cms:archives masterpage='blog.php'>
+				<li><a href="<cms:show k_archive_link />"><cms:date k_archive_date format='F Y' /></a></li>
+				</cms:archives>
+			</ul>
+		</div>
+		
+		<div class="hr grid_12 clearfix">&nbsp;</div>
